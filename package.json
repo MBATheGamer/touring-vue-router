@@ -4,11 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "bun x --bun vite",
+    "build": "bun x --bun vite build",
+    "preview": "bun x --bun vite preview"
   },
   "dependencies": {
+    "axios": "^1.7.2",
+    "vue": "^3.4.21",
     "vue-router": "^4.3.2"
   },
   "devDependencies": {
