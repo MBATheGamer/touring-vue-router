@@ -1,5 +1,7 @@
 import About from "@/views/About.vue";
 import EventList from "@/views/EventList.vue";
+import NetworkError from "@/views/NetworkError.vue";
+import NotFound from "@/views/NotFound.vue";
 import EventDetails from "@/views/event/Details.vue";
 import EventEdit from "@/views/event/Edit.vue";
 import EventLayout from "@/views/event/Layout.vue";
@@ -44,6 +46,22 @@ const routes = [
     path: "/about",
     name: "About",
     component: About,
+  },
+  {
+    path: "/404/:resource",
+    name: "404Resource",
+    component: NotFound,
+    props: true,
+  },
+  {
+    path: "/:catchAll(.*)",
+    name: "NotFound",
+    component: NotFound,
+  },
+  {
+    path: "/network-error",
+    name: "NetworkError",
+    component: NetworkError,
   },
 ];
 
